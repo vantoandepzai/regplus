@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhập Tệp và Kích Hoạt</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        padding: 20px; /* Padding cho body */
+      }
+
+      h2 {
+        text-align: center;
+        padding-bottom: 10px; /* Padding dưới tiêu đề */
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px; /* Padding cho container */
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+
+      input[type="file"] {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Nhập Tệp và Kích Hoạt</h2>
+
+      <!-- Form nhập tệp -->
+      <input type="file" id="fileInput" />
+      <br />
+
+      <!-- Nút Kích Hoạt -->
+      <button onclick="activate()">Kích Hoạt</button>
+    </div>
+
+    <script>
+      function activate() {
+        var fileInput = document.getElementById("fileInput");
+        if (fileInput.files.length > 0) {
+          alert("Tệp đã được chọn: " + fileInput.files[0].name);
+        } else {
+          alert("Vui lòng chọn tệp trước khi kích hoạt.");
+        }
+      }
+    </script>
+  </body>
+</html>
